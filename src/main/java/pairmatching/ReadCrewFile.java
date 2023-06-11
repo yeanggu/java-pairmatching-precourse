@@ -16,8 +16,9 @@ public class ReadCrewFile {
         BufferedReader br;
         try {
             br = new BufferedReader(new FileReader(path + "backend-crew.md"));
-            while (br.readLine() != null) {
-                crewNames.add(br.readLine());
+            String str;
+            while ((str = br.readLine()) != null) {
+                crewNames.add(str);
             }
         } catch (IOException e) {
             e.printStackTrace();
