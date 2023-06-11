@@ -1,15 +1,17 @@
 package pairmatching.view;
 
+import pairmatching.domain.FunctionType;
+import pairmatching.message.MatchingMessage;
+
 public class MatchingView {
 
     public MatchingView() {}
 
     // 프로그램 기능 선택 메시지
     public void selectFunctionMessage() {
-        System.out.println("기능을 선택하세요.");
-        System.out.println("1. 페어 매칭");
-        System.out.println("2. 페어 조회");
-        System.out.println("3. 페어 초기화");
-        System.out.println("Q. 종료");
+        System.out.println(MatchingMessage.SELECT_FUNCTION_MESSAGE);
+        for (FunctionType type : FunctionType.values()) {
+            System.out.println(type.getIndex() + ". " + type.getFunctionName());
+        }
     }
 }
