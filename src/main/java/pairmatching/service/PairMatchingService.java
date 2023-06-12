@@ -19,6 +19,11 @@ public class PairMatchingService {
         // TODO : input에 따른 기능 구현
     }
 
+    // 과정 및 미션 정보
+    public void missionInformation() {
+        matchingView.classAndMissionInformation();
+    }
+
 
 
 }
