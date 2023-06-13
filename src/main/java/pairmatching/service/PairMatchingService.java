@@ -3,7 +3,6 @@ package pairmatching.service;
 import camp.nextstep.edu.missionutils.Console;
 import pairmatching.view.MatchingView;
 
-
 public class PairMatchingService {
 
     private MatchingView matchingView;
@@ -22,8 +21,15 @@ public class PairMatchingService {
     // 과정 및 미션 정보
     public void missionInformation() {
         matchingView.classAndMissionInformation();
+        selectOption();
     }
 
+    // 과정 및 미션 입력하기
+    public void selectOption() {
+        matchingView.selectOption();
+        String input = Console.readLine();
+        // TODO : input에 따른 기능 구현
+    }
 
 
 }
